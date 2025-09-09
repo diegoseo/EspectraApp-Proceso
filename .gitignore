@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Builds / PyInstaller
+dist/
+build/
+*.spec
+*.exe
+*.dll
+*.pak
+*.pkg
+*.dylib
+*.so
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
