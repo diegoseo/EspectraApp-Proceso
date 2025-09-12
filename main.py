@@ -2810,7 +2810,7 @@ class VentanaGraficoDataFusion(QWidget):
                 self.contenedor_opciones_dinamicas.setVisible(False)
 
 
-    def mostrar_opciones_interpolacion_mid(self, estado): # PARA QUE ME MUESTRE EL CHIECKBOX DE LOS METODOS DE INTERPOLACION AL DAR CLICK
+    def mostrar_opciones_interpolacion_mid(self, estado): # PARA QUE ME MUESTRE EL CHECKBOX DE LOS METODOS DE INTERPOLACION AL DAR CLICK
         if estado in [Qt.Checked, 2]:
             if not hasattr(self, 'contenedor_opciones_dinamicas_mid'):
                 self.contenedor_opciones_dinamicas_mid = QWidget()
