@@ -1,8 +1,8 @@
 # # PARA ACTIVAR EL ENTORNO VIRTUAL source .venv/bin/activate
 
 from PySide6.QtWidgets import (
-    QApplication, QWidget, QVBoxLayout, QPushButton, QMessageBox, QFileDialog, QTableWidget, QTableWidgetItem, QInputDialog, QLabel, QDialog, QLineEdit, QCheckBox, QHBoxLayout, QGroupBox, QComboBox,
-    QSpinBox, QHeaderView, QMainWindow, QListWidget, QListWidgetItem, QScrollArea, QToolTip, QButtonGroup, QRadioButton
+    QApplication, QWidget, QVBoxLayout, QPushButton, QMessageBox, QFileDialog, QTableWidget, QTableWidgetItem, QInputDialog, QLabel, QDialog, QLineEdit, QCheckBox, QHBoxLayout, QGroupBox, QComboBox
+    , QHeaderView, QMainWindow, QScrollArea, QButtonGroup, QRadioButton,QToolTip,QListWidget,QListWidgetItem,QSpinBox
 )
 from PySide6.QtGui import QIcon, QFont
 from PySide6.QtCore import Qt, QSize, Signal, QTimer
@@ -16,12 +16,13 @@ from PySide6.QtCore import QUrl
 import pandas as pd
 import sys,os
 import matplotlib
-matplotlib.use("QtAgg")
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import numpy as np
 import tempfile
-import plotly.io as pio
+import plotly.io 
+
+matplotlib.use("QtAgg")
 
 class MenuPrincipal(QWidget):
     def __init__(self):
