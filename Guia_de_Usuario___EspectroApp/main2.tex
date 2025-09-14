@@ -1,41 +1,65 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[12pt,oneside]{report}
 
-% Paquetes básicos
+% Idioma y tipografía
+\usepackage[spanish, es-nodecimaldot]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}        % Mejor salida en PDF
+\usepackage{microtype}      % Mejor espaciado/justificación
 
-% Título y autor
-\title{Guía de Usuario \\ \textbf{EspectroApp}}
-\author{Ricardo}
-\date{\today}
+% Márgenes y espaciado
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Figuras y tablas
+\usepackage{graphicx}
+\graphicspath{{figuras/}}
+\usepackage{float}
+\usepackage{booktabs}       % Tablas bonitas
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Matemática, unidades y citas
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}        % \SI{10}{\micro\meter}, etc.
+\sisetup{output-decimal-marker = {,}}
+
+% Hipervínculos y referencias
+\usepackage[hidelinks]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref} % \cref{fig:...}
+
+% Bibliografía (BibLaTeX + Biber)
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\addbibresource{referencias.bib}
+
+% Portada simple
+\title{Desarrollo de una Estrategia de Fusión de Datos FTIR y Raman...}
+\author{Ricardo J. Leguizamón Acosta \\ Diego H. W. Seo González}
+\date{San Lorenzo, Paraguay \\ \today}
 
 \begin{document}
-
+\pagenumbering{roman}
 \maketitle
+
+\begin{abstract}
+Resumen de 150–250 palabras con objetivo, método, resultados clave y conclusiones.
+\end{abstract}
+
 \tableofcontents
-\newpage
+\listoffigures
+\listoftables
+\cleardoublepage
+\pagenumbering{arabic}
 
-\section{Introducción}
-% Breve descripción de la aplicación
+\include{capitulos/01_introduccion}
+\include{capitulos/02_marco_teorico}
+\include{capitulos/03_metodologia}
+\include{capitulos/04_resultados}
+\include{capitulos/05_conclusiones}
 
-\section{Instalación}
-% Instrucciones para instalar la aplicación
-
-\section{Uso Básico}
-% Explicación de las funciones principales
-
-\section{Funciones Avanzadas}
-% Explicación de funciones avanzadas
-
-\section{Preguntas Frecuentes}
-% FAQ
-
-\section{Contacto y Soporte}
-% Información de contacto
+\printbibliography
+\appendix
+\include{anexos/anexoA} % opcional
 
 \end{document}

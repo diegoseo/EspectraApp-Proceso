@@ -26,3 +26,17 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+#TEX
+*.aux
+*.bbl
+*.fdb_latexmk
+*.fls
+*.log   
+*.out
+*.toc
+*.synctex.gz   
+*.nav
+*.snm
+*.bcf
+*.run.xml
