@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Builds / PyInstaller
+dist/
+build/
+*.spec
+*.exe
+*.dll
+*.pak
+*.pkg
+*.dylib
+*.so
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+#TEX
+*.aux
+*.bbl
+*.fdb_latexmk
+*.fls
+*.log   
+*.out
+*.toc
+*.synctex.gz   
+*.nav
+*.snm
+*.bcf
+*.run.xml
+*.lof
