@@ -1,0 +1,7 @@
+La normalización es una forma de “ajustar” los espectros para que puedan compararse entre sí de manera justa.
+En muchos casos, las diferencias en la intensidad (qué tan alto o bajo aparece un pico) no se deben a cambios químicos reales, sino a factores como la cantidad de muestra, la potencia del láser o la posición del sensor.
+
+Por eso, la normalización corrige esas diferencias artificiales, manteniendo intacta la forma del espectro y las proporciones entre los picos.
+Así, lo que se analiza después (por ejemplo con PCA o Data Fusion) representa principalmente las verdaderas diferencias químicas entre las muestras y no errores del experimento.
+
+En otras palabras, aunque dos espectros puedan verse más “fuertes” o más “débiles”, la normalización asegura que lo importante —la relación entre las señales químicas— se mantenga igual en todos los casos.

@@ -1,0 +1,18 @@
+a) Corrección de línea base
+Corrección lineal:
+Corrección de Shirley:
+b) Normalización
+Normalización por media o Z-score:
+Normalización por área:
+Escalado a intervalos fijos:
+c) Suavizado de señal
+Filtro de Savitzky–Golay:
+Filtro gaussiano:
+Media móvil:
+d) Derivadas
+La primera derivada resalta picos y valles, mientras que la segunda derivada ayuda a separar señales solapadas y eliminar variaciones de fondo. Ambas se calculan mediante diferencias centradas numéricas con respecto al eje de desplazamiento Raman o número de onda.
+
+e) Efectos del preprocesamiento
+La corrección de línea base y la normalización reducen sesgos sistemáticos.
+El suavizado y las derivadas mejoran la resolución y la interpretabilidad de los picos.
+La combinación adecuada de técnicas incrementa la robustez de los análisis posteriores, como PCA, t-SNE o fusión de datos.
