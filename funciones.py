@@ -239,7 +239,7 @@ def pca(df,componentes):
         dato_pca = pca.fit_transform(df)  # fit_transform ya hace el calcilo de los eigenvectores y eigenvalores y matriz de covarianza, (cambiar dato_centralizado por dato_escalado si quiero usar el otro metodo)
         # Calculamos porcentaje de varianza
         varianza_ratio = pca.explained_variance_ratio_  # en [0, 1]
-        varianza_porcentaje = varianza_ratio * 100  # convertir a %
+        varianza_porcentaje = varianza_ratio * 100  
 
         return dato_pca, varianza_porcentaje
     else:
