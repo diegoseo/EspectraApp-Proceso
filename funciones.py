@@ -902,7 +902,7 @@ def concatenar_df_lowfusion(seleccionados,nombres_seleccionados,lista_rangos,int
         print("El campo de cantidad de puntos está vacío")
         
     if input_paso != "":
-        input_paso = int(input_paso)
+        input_paso = float(input_paso.replace(",", ".")) #esto agregamos para que quede input decimales
     else:
         print("El campo de paso está vacío")
         
@@ -1114,7 +1114,7 @@ def concatenar_df_midfusion(seleccionados,nombres_seleccionados,lista_rangos,int
         print("El campo de cantidad de puntos está vacío")
         
     if input_paso != "":
-        input_paso = int(input_paso)
+        input_paso = float(input_paso.replace(",", "."))
     else:
         print("El campo de paso está vacío")
         

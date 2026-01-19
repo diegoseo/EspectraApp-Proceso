@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QPushButton, QMessageBox, QFileDialog, QTableWidget, QTableWidgetItem, QInputDialog, QLabel, QDialog, QLineEdit, QCheckBox, QHBoxLayout, QGroupBox, QComboBox
     , QHeaderView, QMainWindow, QScrollArea, QButtonGroup, QRadioButton,QToolTip,QListWidget,QListWidgetItem,QSpinBox
 )
-from PySide6.QtGui import QIcon, QFont
+from PySide6.QtGui import QIcon, QFont, QDoubleValidator
 from PySide6.QtCore import Qt, QSize, Signal, QTimer
 from functools import partial 
 from hilo import HiloCargarArchivo , HiloGraficarEspectros, HiloMetodosTransformaciones, HiloMetodosReduccion, HiloHca, HiloDataFusion, HiloDataLowFusion, HiloDataLowFusionSinRangoComun, HiloDataMidFusion, HiloDataMidFusionSinRangoComun,HiloGraficarMid # CLASE PERSONALIZADA
@@ -2784,6 +2784,7 @@ class VentanaGraficoDataFusion(QWidget):
                 self.valor = QCheckBox("Ingrese el valor del paso")
                 self.input_paso = QLineEdit()
                 self.input_paso.setPlaceholderText("Ingrese el valor del paso:")
+                self.input_paso.setValidator(QDoubleValidator(0.000001, 1e9, 6))
                 self.promedio = QCheckBox("Calcular el promedio de los archivos")
                 self.numero = QCheckBox("Definir un numero fijo de puntos")
                 self.input_n_puntos = QLineEdit()
@@ -2825,6 +2826,7 @@ class VentanaGraficoDataFusion(QWidget):
                 self.valor_mid = QCheckBox("Ingrese el valor del paso")
                 self.input_paso_mid = QLineEdit()
                 self.input_paso_mid.setPlaceholderText("Ingrese el valor del paso:")
+                self.input_paso_mid.setValidator(QDoubleValidator(0.000001, 1e9, 6))
                 self.promedio_mid = QCheckBox("Calcular el promedio de los archivos")
                 self.numero_mid = QCheckBox("Definir un numero fijo de puntos")
                 self.input_n_puntos_mid = QLineEdit()
