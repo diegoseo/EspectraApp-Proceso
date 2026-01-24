@@ -1178,12 +1178,16 @@ def concatenar_df_midfusion(seleccionados,nombres_seleccionados,lista_rangos,int
         
     elif opcion == 2:
         pasos = []
-        for i, df in enumerate(seleccionados):
-            x = pd.to_numeric(df.iloc[:, 0], errors='coerce').dropna().astype(float).sort_values()
+        for df in seleccionados:
+            x = pd.to_numeric(df.iloc[:, 0], errors='coerce').dropna().astype(float).values
+            x = np.sort(x)
             dx = np.diff(x)
-            pasos.extend(dx)
-            
-        paso = np.mean(pasos)
+            dx = dx[dx > 0]  # evita ceros/negativos por duplicados o desorden
+            if dx.size > 0:
+                pasos.append(np.median(dx))  # o np.mean(dx) segun Seo 
+
+        paso = float(np.mean(pasos)) if len(pasos) > 0 else None
+        
 
         lista_interpolado =  interpolar_df(seleccionados, paso, metodo_intp,min , max ,primera_fila  )
         
